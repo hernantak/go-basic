@@ -1,0 +1,16 @@
+{{ template "layout" .}}
+{{ define "main" }}
+    <div class="text">
+        Halo Hernanta
+    </div>
+
+    {{ range . }}
+        <div class="text box-with-shadow">
+            {{ .Nama }} - {{ .Price }}
+            <div class="danger_stock">
+                {{ .StockStatus }}
+            </div>
+        </div>
+    {{ end }}
+
+{{ end }}
